@@ -1,0 +1,41 @@
+{
+  "name": "express-app-lambda-bellobot",
+  "version": "1.0.0",
+  "description": "A bot to share music from a Spotify Public Playlist reflected on an Airtable Base with a WhatsApp Group.",
+  "main": "app.js",
+  "dependencies": {
+    "airtable": "^0.7.1",
+    "aws-serverless-express": "^3.3.6",
+    "claudia": "^5.9.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  },
+  "scripts": {
+    "aws-express-serverless": "claudia generate-serverless-express-proxy --express-module app --proxy-module-name bellobot",
+    "create": "claudia create --region us-east-1 --version development --handler bellobot.handler --deploy-proxy-api --set-env-from-json ../env/bellobot/dev.json",
+    "update": "claudia update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjsalinas/bellobot.git"
+  },
+  "keywords": [
+    "Node.js",
+    "Spotify",
+    "Claudia",
+    "JS",
+    "Express",
+    "aws-serveless-express",
+    "Airtable",
+    "iOS",
+    "Shortcuts"
+  ],
+  "author": "Pedro J. Salinas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pjsalinas/bellobot/issues"
+  },
+  "homepage": "https://github.com/pjsalinas/bellobot#readme"
+}
