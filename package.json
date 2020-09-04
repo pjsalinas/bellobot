@@ -4,7 +4,7 @@
   "description": "A bot to share music from a Spotify Public Playlist reflected on an Airtable Base with a WhatsApp Group.",
   "main": "app.js",
   "dependencies": {
-    "airtable": "^0.7.1",
+    "airtable": "^0.7.2",
     "aws-serverless-express": "^3.3.6",
     "claudia": "^5.9.1",
     "express": "^4.17.1"
